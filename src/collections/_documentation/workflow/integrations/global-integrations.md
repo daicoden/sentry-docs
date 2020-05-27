@@ -230,7 +230,7 @@ openssl x509 -pubkey -noout -in bitbucket_publickey.cer  > bitbucket_publickey.p
 
 ##### III. Connect your Bitbucket Server application with Sentry
 {% capture __alert_content -%}
-Make sure you have whitelisted [Sentry's IP ranges.](https://docs.sentry.io/ip-ranges/)
+Make sure you have whitelisted [Sentry's IP ranges]({%- link _documentation/meta/ip-ranges.md -%}).
 {%- endcapture -%}
 {%- include components/alert.html
   title="Note"
@@ -458,7 +458,7 @@ Sentry owner or manager permissions, and GitHub owner permissions are required t
 
 ###### Add new GitHub App
 
-1. Make sure you've whitelisted Sentry’s outbound request [IPs addresses](https://docs.sentry.io/ip-ranges/) for your GitHub Enterprise instance.
+1. Make sure you've whitelisted Sentry’s outbound request [IPs ranges]({%- link _documentation/meta/ip-ranges.md -%}) for your GitHub Enterprise instance.
 2. In your GitHub Enterprise organization, navigate to Settings > Developer Settings > **GitHub Apps** and click to add a new **New GitHub App**.
 
     [{% asset github-e-new-app.png %}]({% asset github-e-new-app.png @path %})
@@ -686,7 +686,7 @@ A `<SHORT-ID>` may look something like 'BACKEND-C' in the image below.
 
 FAQ:
 - I'm using GitLab on-premise. Do I need to whitelist Sentry's IP addresses?
-    - Yes. You can find our IP ranges [ here ]({%- link ip-ranges.md -%}).
+    - Yes. You can find our IP ranges [ here ]({%- link _documentation/meta/ip-ranges.md -%}).
 - Do you support subgroups?
     - Currently, we only support subgroups for users using GitLab 11.6 or higher.
 - My repositories are hosted under my user account, not a group account. Can I still use this integration?
@@ -815,7 +815,7 @@ openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
 
 ##### III. Connect your Jira Server application with Sentry
 {% capture __alert_content -%}
-Make sure you have whitelisted [Sentry's IP ranges.](https://docs.sentry.io/ip-ranges/)
+Make sure you have whitelisted [Sentry's IP ranges]({%- link _documentation/meta/ip-ranges.md -%}).
 {%- endcapture -%}
 {%- include components/alert.html
   title="Note"
@@ -1083,7 +1083,8 @@ Follow the instructions in the link below:
 <https://help.split.io/hc/en-us/articles/360029879431>
 
 ## Troubleshooting
+
 If you're having trouble setting up Sentry with your on-premise integration like JIRA Server, Bitbucket Server, GitHub Enterprise, or Gitlab:
 - Ensure that the installation URL you provided is a fully qualified domain name (FQDN), which is resolvable on the internet.
-- Double-check that the IP addresses Sentry uses to make outbound requests are whitelisted <https://docs.sentry.io/ip-ranges/>.
+- Double-check that the IP addresses Sentry uses to make outbound requests are whitelisted <{%- link _documentation/meta/ip-ranges.md -%}>.
 - Make sure that Sentry's access to your installation URL is not path restricted.
